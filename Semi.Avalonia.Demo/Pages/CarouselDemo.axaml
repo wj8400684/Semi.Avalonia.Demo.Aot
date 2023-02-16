@@ -1,0 +1,55 @@
+<UserControl
+    x:Class="Semi.Avalonia.Demo.Pages.CarouselDemo"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    d:DesignHeight="450"
+    d:DesignWidth="800"
+    mc:Ignorable="d">
+    <UserControl.Styles>
+        <Style Selector="Border">
+            <Setter Property="Height" Value="200" />
+        </Style>
+        <Style Selector="TextBlock">
+            <Setter Property="HorizontalAlignment" Value="Center" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+        </Style>
+    </UserControl.Styles>
+    <StackPanel Spacing="20">
+        <Carousel Theme="{DynamicResource FullCarousel}">
+            <Carousel.PageTransition>
+                <PageSlide Orientation="Horizontal" Duration="0.25" />
+            </Carousel.PageTransition>
+            <Border Background="#EAF5FF">
+                <TextBlock Text="Text 1" />
+            </Border>
+            <Border Background="#F9F9F9">
+                <TextBlock Text="Text 2" />
+            </Border>
+            <Border Background="#FFF8EA">
+                <TextBlock Text="Text 3" />
+            </Border>
+            <Border Background="#FEF2ED">
+                <TextBlock Text="Text 4" />
+            </Border>
+        </Carousel>
+        <Carousel Classes="Line" Theme="{DynamicResource FullCarousel}">
+            <Carousel.PageTransition>
+                <PageSlide Orientation="Horizontal" Duration="0.25" />
+            </Carousel.PageTransition>
+            <Border Background="#EAF5FF">
+                <TextBlock Text="Text 1" />
+            </Border>
+            <Border Background="#F9F9F9">
+                <TextBlock Text="Text 2" />
+            </Border>
+            <Border Background="#FFF8EA">
+                <TextBlock Text="Text 3" />
+            </Border>
+            <Border Background="#FEF2ED">
+                <TextBlock Text="Text 4" />
+            </Border>
+        </Carousel>
+    </StackPanel>
+</UserControl>
